@@ -1,26 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sarah Chastain | GitHub Pages</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sarah Chastain</title>
+<meta name="description" content="Sarah Chastain - radio and time-domain astronomer. Transient searches, gamma-ray burst afterglows, and the software behind them." />
+<style>
+  :root {
+    --bg: #fdfdfc;
+    --fg: #1b1b1a;
+    --muted: #5c5c57;
+    --rule: #e2e2dd;
+    --link: #1c5d8c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #16171a;
+      --fg: #e8e8e4;
+      --muted: #a0a099;
+      --rule: #2c2e33;
+      --link: #7ab6dd;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #16171a;
+    --fg: #e8e8e4;
+    --muted: #a0a099;
+    --rule: #2c2e33;
+    --link: #7ab6dd;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.65 Georgia, "Times New Roman", serif;
+    padding: 3.5rem 16px 5rem;
+  }
+  main { max-width: 42rem; margin: 0 auto; }
+
+  h1 {
+    font-size: 1.9rem;
+    line-height: 1.2;
+    margin: 0 0 .15rem;
+    letter-spacing: -0.01em;
+  }
+  .role { color: var(--muted); margin: 0 0 2.25rem; }
+
+  h2 {
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: var(--muted);
+    margin: 2.5rem 0 .75rem;
+    padding-bottom: .4rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  p { margin: 0 0 1rem; }
+  a { color: var(--link); text-decoration: none; border-bottom: 1px solid transparent; }
+  a:hover { border-bottom-color: currentColor; }
+
+  ul.items { list-style: none; padding: 0; margin: 0; }
+  ul.items > li { margin: 0 0 1.15rem; }
+  ul.items .name { font-weight: 700; }
+  ul.items .what { color: var(--muted); display: block; }
+
+  .contact { font-family: system-ui, -apple-system, sans-serif; font-size: .95rem; }
+  .contact span { color: var(--muted); }
+</style>
 </head>
 <body>
+<main>
 
   <h1>Sarah Chastain</h1>
-  <p>Welcome to my home page.</p>
+  <p class="role">Postdoctoral researcher, Department of Physics &amp; Astronomy, Texas Tech University</p>
+
+  <h2>Research</h2>
+  <p>
+    I study transient phenomena in the image plane, through both targeted and blind
+    searches. My work ties together finding a signal inside an enormous volume of data,
+    working out what detections and non-detections imply about the underlying population,
+    and interpreting the physics of what was found.
+  </p>
+  <p>
+    In practice that means searching radio and optical survey images for sources that
+    appear and disappear, modeling gamma-ray burst afterglows to measure the energy in the
+    jet and the density of the gas around the explosion, and building the software when it
+    does not already exist.
+  </p>
+
+  <h2>Software</h2>
+  <ul class="items">
+    <li>
+      <a class="name" href="https://github.com/dentalfloss1/RaTS">RaTS</a>
+      <span class="what">Radio Transient Simulations. Computes transient rates for radio
+      surveys by Monte Carlo simulation, across a range of light curve shapes and
+      observing setups.</span>
+    </li>
+    <li>
+      <a class="name" href="https://github.com/dentalfloss1/GRITS">GRITS</a>
+      <span class="what">GPU Radio Image Transient Search. Flux-calibrates images,
+      differences them, detects transients and applies quality control, implemented on the
+      GPU and optimized for high data throughput.</span>
+    </li>
+    <li>
+      <a class="name" href="https://github.com/ledatelescope/bifrost">Bifrost</a>
+      <span class="what">Contributor. High-throughput GPU streaming framework for radio
+      telescopes.</span>
+    </li>
+  </ul>
 
   <h2>Projects</h2>
+  <ul class="items">
+    <li>
+      <a class="name" href="https://dentalfloss1.github.io/tess-fermi-results/">TESS-Fermi results</a>
+      <span class="what">Searching TESS full-frame images for afterglows from poorly
+      localized Fermi gamma-ray bursts.</span>
+    </li>
+  </ul>
 
-  <div class="project-card">
-    <h2><a href="https://dentalfloss1.github.io/tess-fermi-results/">
-      TESS Fermi Results
-    </a></h2>
-    <p>Results and analysis from the TESS-Fermi project.</p>
-    <a href="https://dentalfloss1.github.io/tess-fermi-results/">
-      View project →
-    </a>
-  </div>
+  <h2>Elsewhere</h2>
+  <p class="contact">
+    <span>Email</span> <a href="mailto:sarchast@ttu.edu">sarchast@ttu.edu</a><br />
+    <span>GitHub</span> <a href="https://github.com/dentalfloss1">github.com/dentalfloss1</a><br />
+    <span>Publications</span> <a href="https://orcid.org/0000-0003-3507-335X">ORCID 0000-0003-3507-335X</a>
+  </p>
 
+</main>
 </body>
 </html>
